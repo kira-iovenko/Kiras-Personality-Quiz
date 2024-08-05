@@ -14,3 +14,27 @@ var q2a1 = document.getElementById("q2a1");
 var q2a2 = document.getElementById("q2a2");
 var q3a1 = document.getElementById("q3a1");
 var q3a2 = document.getElementById("q3a2");
+
+/*track eliScore and check if quiz is complete*/
+function eli(){
+  eliScore += 1;
+  numQuestion += 1;
+
+  console.log("numQuestion = "+ numQuestion+" eliScore = "+eliScore);
+}
+
+/*track joScore and check if quiz is complete*/
+function jo(){
+  joScore += 1;
+  numQuestion += 1;
+
+  console.log("numQuestion = "+ numQuestion+" joScore = "+joScore);
+}
+
+/*listen for click on answer buttons and call function if clicked*/
+q1a1.addEventListener("click", eli);
+q1a2.addEventListener("click", jo);
+q2a1.addEventListener("click", eli);
+q2a2.addEventListener("click", jo);
+q3a1.addEventListener("click", eli);
+q3a2.addEventListener("click", jo);

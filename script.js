@@ -20,10 +20,10 @@ var q3a2 = document.getElementById("q3a2");
 /*update quiz result*/
 function updateResult(){
   if (eliScore >= 2){
-    result.innerHTML = ("You are Elizabeth Bennet!")
+    result.innerHTML = ("You are Elizabeth Bennet!");
     console.log("You are Elizabeth Bennet!");
   } else if (joScore >= 2){
-    result.innerHTML = ("You are Jo March!")
+    result.innerHTML = ("You are Jo March!");
     console.log("You are Jo March!");
   }
 }
@@ -51,6 +51,8 @@ function jo(){
     updateResult();
   }
 }
+/*variable for restart button*/
+var restart = document.getElementById("restart");
 
 /*listen for click on answer buttons and call function if clicked*/
 q1a1.addEventListener("click", eli);
@@ -59,3 +61,12 @@ q2a1.addEventListener("click", eli);
 q2a2.addEventListener("click", jo);
 q3a1.addEventListener("click", eli);
 q3a2.addEventListener("click", jo);
+restart.addEventListener("click", clear);
+
+/*clear results*/
+function clear(){
+  result.innerHTML = ("Your result is...");
+  eliScore = 0;
+  joScore = 0;
+  numQuestion = 0;
+}

@@ -7,7 +7,9 @@ var joScore = 0;
 /*variable to store the number of questions answered*/
 var numQuestion = 0;
 
-/*variables to store the buttons*/
+/*Store HTML variables using DOM*/
+var result = document.getElementById("result");
+
 var q1a1 = document.getElementById("q1a1");
 var q1a2 = document.getElementById("q1a2");
 var q2a1 = document.getElementById("q2a1");
@@ -18,8 +20,10 @@ var q3a2 = document.getElementById("q3a2");
 /*update quiz result*/
 function updateResult(){
   if (eliScore >= 2){
+    result.innerHTML = ("You are Elizabeth Bennet!")
     console.log("You are Elizabeth Bennet!");
   } else if (joScore >= 2){
+    result.innerHTML = ("You are Jo March!")
     console.log("You are Jo March!");
   }
 }
